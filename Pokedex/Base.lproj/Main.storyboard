@@ -21,7 +21,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AHF-3y-U5t">
@@ -146,7 +146,7 @@
                         <viewControllerLayoutGuide type="bottom" id="BwY-eu-HeC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Idv-Yc-l5Q">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sZD-RW-tRh">
@@ -159,7 +159,7 @@
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1B-4v-Fyc">
                                         <state key="normal" image="back"/>
                                         <connections>
-                                            <action selector="backBtnPressed:" destination="FyS-9n-yz8" eventType="touchUpInside" id="2dR-wE-0fq"/>
+                                            <action selector="backBtnPrsd:" destination="FyS-9n-yz8" eventType="touchUpInside" id="ey1-ko-duq"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -187,7 +187,7 @@
                                         </segments>
                                         <color key="tintColor" red="1" green="0.27942799550000003" blue="0.27822470649999997" alpha="1" colorSpace="calibratedRGB"/>
                                     </segmentedControl>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uUv-SU-hW9">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uUv-SU-hW9">
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yLQ-A9-DKf">
                                                 <subviews>
@@ -206,7 +206,7 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WDM-1G-dhB">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WDM-1G-dhB">
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="jFV-14-zSo">
                                                 <subviews>
@@ -249,9 +249,9 @@
                                                     <constraint firstItem="eWX-gk-KZH" firstAttribute="leading" secondItem="jFV-14-zSo" secondAttribute="leading" constant="188" id="0r6-vg-ryH"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="S5y-AS-HMV">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="S5y-AS-HMV">
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="85" translatesAutoresizingMaskIntoConstraints="NO" id="at1-Na-Zk2">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="at1-Na-Zk2">
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="-12" translatesAutoresizingMaskIntoConstraints="NO" id="3qA-1K-sbk">
                                                                 <subviews>
@@ -290,7 +290,7 @@
                                                             </stackView>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="Eee-pK-rRV">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="Eee-pK-rRV">
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xFB-ph-fyR">
                                                                 <subviews>
@@ -367,10 +367,10 @@
                             <constraint firstItem="XYT-GJ-Veq" firstAttribute="centerX" secondItem="IhA-dg-JoN" secondAttribute="centerX" id="TC0-3z-kSd"/>
                             <constraint firstItem="6Sz-xO-Sjn" firstAttribute="centerX" secondItem="XYT-GJ-Veq" secondAttribute="centerX" id="XRm-u9-Mhw"/>
                             <constraint firstAttribute="trailing" secondItem="sZD-RW-tRh" secondAttribute="trailing" id="YsY-yT-KGZ"/>
-                            <constraint firstItem="IhA-dg-JoN" firstAttribute="top" secondItem="6Sz-xO-Sjn" secondAttribute="bottom" constant="36" id="bAT-yV-O7h"/>
+                            <constraint firstItem="IhA-dg-JoN" firstAttribute="top" secondItem="6Sz-xO-Sjn" secondAttribute="bottom" constant="18" id="bAT-yV-O7h"/>
                             <constraint firstItem="BtI-BZ-oIL" firstAttribute="centerX" secondItem="6Sz-xO-Sjn" secondAttribute="centerX" id="eUk-mq-we1"/>
                             <constraint firstItem="sZD-RW-tRh" firstAttribute="top" secondItem="Idv-Yc-l5Q" secondAttribute="top" id="ebf-3w-SbY"/>
-                            <constraint firstItem="IhA-dg-JoN" firstAttribute="top" secondItem="XYT-GJ-Veq" secondAttribute="bottom" constant="41" id="qrd-Fd-rxC"/>
+                            <constraint firstItem="IhA-dg-JoN" firstAttribute="top" secondItem="XYT-GJ-Veq" secondAttribute="bottom" constant="23" id="qrd-Fd-rxC"/>
                             <constraint firstItem="BtI-BZ-oIL" firstAttribute="top" secondItem="sZD-RW-tRh" secondAttribute="bottom" constant="8" symbolic="YES" id="rFD-eX-8eo"/>
                             <constraint firstItem="BwY-eu-HeC" firstAttribute="top" secondItem="IhA-dg-JoN" secondAttribute="bottom" constant="55" id="tC8-nU-TpH"/>
                         </constraints>

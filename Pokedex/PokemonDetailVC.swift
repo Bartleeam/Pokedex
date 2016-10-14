@@ -10,7 +10,7 @@ import UIKit
 
 class PokemonDetailVC: UIViewController {
 
-    var pokemon: Pokemon!
+
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var mainImg: UIImageView!
@@ -25,27 +25,44 @@ class PokemonDetailVC: UIViewController {
     @IBOutlet weak var nextEvoImg: UIImageView!
     @IBOutlet weak var evoLbl: UILabel!
     
+    var pokemon: Pokemon!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nameLabel.text = pokemon.name.capitalized
+        // Do any additional setup after loading the view.
         
+        let img = UIImage(named: "\(pokemon.pokedexId)")
+        mainImg.image = img
+        currentEvoImg.image = img
+        
+        nameLabel.text = pokemon.name.capitalized
+        pokedexLbl.text = "\(pokemon.pokedexId)"
         pokemon.downloadPokemonDetail {
-            print("Did arrive here")
+            // after completed call
             self.updateUI()
         }
     }
     
     func updateUI() {
-        attackLbl.text = pokemon.attack
         defenseLbl.text = pokemon.defense
-        heightLbl.text = pokemon.height
+        attackLbl.text = pokemon.attack
         weightLbl.text = pokemon.weight
-        
+        heightLbl.text = pokemon.height
+        typeLbl.text = pokemon.type
+        descriptionLbl.text = pokemon.description
+        if pokemon.nextEvolutionId == "" {
+            evoLbl.text = "No further evos..."
+            nextEvoImg.isHidden = true
+        } else {
+            nextEvoImg.isHidden = false
+            nextEvoImg.image = UIImage(named: pokemon.nextEvolutionId)
+            let str = "Next evolution: \(pokemon.nextEvolutionName) - LVL \(pokemon.nextEvolutionLevel)"
+            evoLbl.text = str
+        }
     }
     
-    @IBAction func backBtnPressed(_ sender: UIButton) {
+    @IBAction func backBtnPrsd(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
-    
 }

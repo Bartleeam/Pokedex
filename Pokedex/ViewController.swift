@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import Alamofire
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
 
@@ -63,7 +64,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 let pokeID = Int(row["id"]!)!
                 let name = row["identifier"]!
                 
-                let poke = Pokemon(name: name, pokedexID: pokeID)
+                let poke = Pokemon(name: name, pokedexId: pokeID)
                 pokemon.append(poke)
                 
             }
